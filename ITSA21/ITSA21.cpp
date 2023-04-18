@@ -1,19 +1,32 @@
 #include <iostream>
 #include <iomanip> 
 using namespace std;
-
-int main() {
-    float num;
-    float max_num = -1e9, min_num = 1e9;
-
-    for (int i = 0; i < 10; i++) {
-        cin >> num;
-        if (num > max_num) max_num = num;
-        if (num < min_num) min_num = num;
+int main (){
+    float M,n;
+    float num[10];
+    for (int i = 0; i < 10; i++)
+    {
+        cin >> num[i];
     }
+        M=num[0];
+        n=num[0];
+    for (int i = 0; i < 10; i++)
+    {   
+        if (num[i]>M)
+        {
+            M=num[i];
+        }    
+    }
+    for (int i = 0; i < 10; i++)
+    {   
+        if (num[i]<n)
+        {
+            n=num[i];
+        }    
 
-    cout << "maximum:" << fixed << setprecision(2) << max_num << endl;
-    cout << "minimum:" << fixed << setprecision(2) << min_num << endl;
 
+    }
+    cout << fixed << "maximum:"<< setprecision(2)<< M <<endl;
+    cout << fixed << "minimum:"<< setprecision(2)<< n <<endl;
     return 0;
 }
